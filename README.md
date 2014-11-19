@@ -2,7 +2,7 @@ Getting and Cleaning Data Course Project
 ========================================
 Assumption
 ----------
-1. dplyr package is installed, if not please type install.package("dplyr") on either R or R Studio console and hit Enter to download online and install it.
+1. dplyr package is installed, if not please type install.packages("dplyr") on either R or R Studio console and hit Enter to download online and install it.
 
 2. You must have internet access to either allow the script to download the original dataset or obtain the files manually yourself.
 
@@ -12,14 +12,16 @@ Assumption
 
 Steps to execute run_analysis.R script
 --------------------------------------
-##Automatic method (elapsed run time around 6 minutes, time may vary depending on download speed)
+###Automatic method
+Note: elapsed run time around 6 minutes, time may vary depending on CPU and download speed
 
 1. Just source run_analysis.R by typing source("./run_analysis.R") and hit Enter.
 
-##Manually obtain the dataset yourself (elapsed run time around 1 minute)
+###Manually obtain the dataset yourself
+Note: elapsed run time around 1 minute, time may vary depending on CPU speed
 
-1. Click on this [link](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) to download the dataset and save it to your current working directory then rename it to HARDataSet.zip.
+1. Click on this [LINK](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) to download the dataset and save it to your current working directory then rename it to HARDataSet.zip.
 
-2. Right click on this [link](https://raw.githubusercontent.com/courseramchen2k2/GetDataProject/master/DescriptiveName.txt) and choose Save Link As, to download and save DescriptiveName.txt in your current working directory.
+2. Right click on this [LINK](https://raw.githubusercontent.com/courseramchen2k2/GetDataProject/master/DescriptiveName.txt) and choose Save Link As, save DescriptiveName.txt in your current working directory.
 
 3. Source run_analysis.R by typing source("./run_analysis.R") and hit Enter.

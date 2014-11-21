@@ -42,26 +42,26 @@ Data <- tbl_df(rbind(cbind(read.table(TrainFile3, col.names="SubjectID"),
                            read.table(TestFile1))))
 
 ## Part 2, Extracts only the measurements on the mean and std deviation 
-## Select from list of columnnames using regular expression and find only instances containing "mean", "Mean", 
-## and "std", and the +2 is adjustment for column index due to cbined "Subject ID" & "Activity ID" in Part 1. 
-## This way also has the advantage of perserving the original order of the column instead of mixing it up when 
-## I first tried to use the contains("mean"), contains("std") inside the select statment. 
+## Select from list of column names using regular expression and find only instances containing "mean", "Mean", 
+## and "std", and the +2 is adjustment for column index due to cbined "SubjectID" & "ActivityID" in Part 1. 
+## This way also has the advantage of preserving the original order of the column instead of mixing it up when 
+## I first tried to use the contains("mean"), contains("std") inside the select statement. 
 message("Working on Part 2 of Project...")
 Data2 <- Data %>% 
          select(c(1,2), ColumnName$V1[grepl("mean", ColumnName$V2)|
                                       grepl("Mean", ColumnName$V2)|
                                       grepl("std", ColumnName$V2)]+2) %>%
 
-## Part 3, Uses descriptve activity names to name the activities in the data set 
+## Part 3, Uses descriptive activity names to name the activities in the data set 
 ## merge the activity data (only contains the 6 activities and index number) with complete data set, sort the 
-## rows and rearange the columns
+## rows and rearrange the columns
 merge(tbl_df(read.table(Activity, col.names=c("ActID", "Activity"))), 
                 by.x="ActivityID", by.y="ActID") %>%
                         arrange(SubjectID, ActivityID) %>%
                         select(SubjectID, Activity, V1:V561)
         
-## Part 4, lebel the data set with descriptive variable names.
-## descriptive variable namess are read from an external file.
+## Part 4, label the data set with descriptive variable names.
+## descriptive variable names are read from an external file.
 message("Working on Part 3 & 4 of Project...")
 names(Data2) <- c("SubjectID","Activity",as.character(read.table(DFile)[,"V1"]))
         
@@ -72,3 +72,5 @@ Data3 <- Data2 %>%
          summarise_each(funs(mean),3:88)
 write.table(Data3, file="./TidyData.txt", row.name=FALSE)
 message("Done")
+message("Examine file written")
+View(read.table("./TidyData.txt", check.names=FALSE))

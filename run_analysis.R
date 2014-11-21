@@ -6,13 +6,13 @@ FileName <- "./HARDataSet.zip"
 FileURL1 <- "http://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip "
 FileURL2 <- "https://raw.githubusercontent.com/courseramchen2k2/GetDataProject/master/DescriptiveName.txt"
 Activity <-"./UCI HAR Dataset/activity_labels.txt"        ##    6 obs,   2 variables
-ColumnLabel<- "./UCI HAR Dataset/features.txt"            ##  561 obs,   2 variables (column lable)
+ColumnLabel<- "./UCI HAR Dataset/features.txt"            ##  561 obs,   2 variables (column label)
 TrainFile1 <- "./UCI HAR Dataset/train/X_train.txt"       ## 7352 obs, 561 variables (training data set)
 TrainFile2 <- "./UCI HAR Dataset/train/Y_train.txt"       ## 7352 obs,   1 variables (training ActivityID)
-TrainFile3 <- "./UCI HAR Dataset/train/subject_train.txt" ## 7352 obs,   1 variables (training subject ID)
-TestFile1 <- "./UCI HAR Dataset/test/X_test.txt"          ## 2947 obs, 561 variables (test data)
+TrainFile3 <- "./UCI HAR Dataset/train/subject_train.txt" ## 7352 obs,   1 variables (training SubjectID)
+TestFile1 <- "./UCI HAR Dataset/test/X_test.txt"          ## 2947 obs, 561 variables (test data set)
 TestFile2 <- "./UCI HAR Dataset/test/Y_test.txt"          ## 2947 obs,   1 variables (test ActivityID)
-TestFile3 <- "./UCI HAR Dataset/test/subject_test.txt"    ## 2947 obs,   1 variables (test subject ID)
+TestFile3 <- "./UCI HAR Dataset/test/subject_test.txt"    ## 2947 obs,   1 variables (test SubjectID)
 DFile <- "./DescriptiveName.txt"
 
 ## download necessary files to current working directory if file not present.

@@ -2,7 +2,7 @@ Getting and Cleaning Data Course Project
 ========================================
 Summary Description
 -------------------
-Create R script called run_analysis.R that does the following. 
+Source dataset is based on Human Activity Recognition Using Smartphones Data Set from [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and the dataset is obtained from the following link [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip), using the dataset to create R script called run_analysis.R that does the following. 
 
 1. Merges the training and the test sets to create one data set.
 
@@ -13,6 +13,9 @@ Create R script called run_analysis.R that does the following.
 4. Appropriately labels the data set with descriptive variable names. 
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+
+Output file: TidyData.txt
+Note: for detailed description of what run_analysis.R does, please check on the section near the end of this markup file.
 
 
 Steps to execute run_analysis.R script
@@ -42,3 +45,16 @@ Note: elapsed run time around 1 minute, time may vary depending on CPU speed
 2. Right click on this [LINK](https://raw.githubusercontent.com/courseramchen2k2/GetDataProject/master/DescriptiveName.txt) and choose Save Link As, save DescriptiveName.txt in your current working directory.
 
 3. Source run_analysis.R by typing source("./run_analysis.R") and hit Enter.
+
+
+Detail Description of run_analysis.R
+------------------------------------
+1. Here is a [graphical representation]() of what the script does for part 1. For the Training Dataset, it column binds X_train.txt, Y_train.txt, and subject_traing.txt together, and it does the same with Test Dataset by column bind X_test.txt, Y_test.txt and subject_test.txt, then finally row bind the Training Dataset and Test Dataset together as one
+
+2. Here is a [graphical representation]() of what the script does for part 2. 
+
+3.
+
+4.
+
+5.

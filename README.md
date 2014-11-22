@@ -18,7 +18,7 @@ Source dataset is based on Human Activity Recognition Using Smartphones Data Set
 
 * Output file: TidyData.txt (180 rows and 88 columns)
 
-* Note: for detailed description of what run_analysis.R does, please check on the [section](https://github.com/courseramchen2k2/GetDataProject#detail-description-of-run_analysisr) near the end of this markup file and read the comments in the script code.
+* Note: for detailed description of what run_analysis.R does, please check on the [section](https://github.com/courseramchen2k2/GetDataProject#detail-description-of-run_analysisr) near the end of this markup file and read the comments in the [script code](https://github.com/courseramchen2k2/GetDataProject/blob/master/run_analysis.R).
 
 
 ##Steps to execute run_analysis.R script
@@ -58,6 +58,6 @@ Note: elapsed run time around 1 minute, time may vary depending on CPU speed
 
 3. Take data from part 2 and merge Activity data (only contains index number and 6 activities names), so that each ActivityID correspond to an activities names, then sort the rows by SubejctID and ActivityID, then remove ActivityID(replaced by Activity name).
 
-4. Descriptive variable names are read from an external file DescriptiveName.txt assigned to the Complete Dataset, also reset the factor order so it matches the order of Activity Name and the factor level will be WALKING < WLKING_UPSTAIRS < WALKING_DOWNSTAIRS < SETTING < STANDARDING < LAYING, this way when performing the next step data will still be ordered.
+4. Descriptive variable names are read from an external file DescriptiveName.txt assigned to the columns of Complete Dataset, also reset the factor order of Activity column so it matches the order from activity_labels.txt and the factor level will be WALKING < WALKING_UPSTAIRS < WALKING_DOWNSTAIRS < SETTING < STANDING < LAYING, this way when performing the next step, data will still be ordered.
 
-5. Again using dplyr package, pipe Complete Dataset, group by SubjectID and Activity, summarise each of column 3 to 88 with function mean(). then write the result to TidyData.txt in current working directory and view it.  The output file TidyData.txt is a tidy data set because it matches the tidy data definition that 1. Each variable should be in on column.  2. Each different observation of that variable should be in a different row. 3. There should be one table for each "kind" of variable. 4. If you hae multiple tables, they should include a column in the table that allows them to be linked.
+5. Again using dplyr package, pipe Complete Dataset, group by SubjectID and Activity, summarise each of column 3 to 88 with function mean(). then write the result to TidyData.txt in current working directory and view it.  The output file TidyData.txt is a tidy data set because it matches the tidy data definition that 1. Each variable should be in on column.  2. Each different observation of that variable should be in a different row. 3. There should be one table for each "kind" of variable. 4. If you have multiple tables, they should include a column in the table that allows them to be linked.

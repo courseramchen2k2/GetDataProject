@@ -14,6 +14,8 @@ Source dataset is based on Human Activity Recognition Using Smartphones Data Set
 
 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
+* Input files: from the UCI HAR Dataset, X_train.txt, Y_train.txt, subject_train.txt, X_test.txt, Y_test.txt, subject_text.txt, activity_labels.txt, features.txt
+
 * Output file: TidyData.txt
 
 * Note: for detailed description of what run_analysis.R does, please check on the [section](https://github.com/courseramchen2k2/GetDataProject#detail-description-of-run_analysisr) near the end of this markup file and read the comments in the script code.
@@ -27,9 +29,9 @@ Source dataset is based on Human Activity Recognition Using Smartphones Data Set
 
 2. You must have internet access to either allow the script to download the original dataset or obtain the files manually yourself.
 
-3. Your current working directory is already setup and the environment is clean (meaning there are no other work, data, variables in the environment, environment will be wiped clean when running script, be WARNED).
+3. Your current working directory is already setup and the environment is clean (meaning there are no other work, data, variables in the environment, environment will be automatically wiped clean when running the script).
 
-4. run_analysis.R is in current working directory.
+4. run_analysis.R is already saved in current working directory, if not, please right click on this [LINK](https://github.com/courseramchen2k2/GetDataProject/blob/master/run_analysis.R) and save run_analysis.R to current working directory.
 
 ###Automatic method
 -------------------

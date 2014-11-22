@@ -31,7 +31,7 @@ Source dataset is based on Human Activity Recognition Using Smartphones Data Set
 
 3. Your current working directory is already setup and the environment is clean (meaning there are no other work, data, variables in the environment, environment will be automatically wiped clean when running the script).
 
-4. run_analysis.R is already saved in current working directory, if not, please right click on this [LINK](https://github.com/courseramchen2k2/GetDataProject/blob/master/run_analysis.R) and save run_analysis.R to current working directory.
+4. run_analysis.R is already saved in current working directory, if not, please right click on this [LINK](https://raw.githubusercontent.com/courseramchen2k2/GetDataProject/master/run_analysis.R) and save run_analysis.R to current working directory.
 
 ###Automatic method
 -------------------

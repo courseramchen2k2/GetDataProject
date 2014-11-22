@@ -16,7 +16,7 @@ Source dataset is based on Human Activity Recognition Using Smartphones Data Set
 
 * Input files: from the UCI HAR Dataset, X_train.txt, Y_train.txt, subject_train.txt, X_test.txt, Y_test.txt, subject_text.txt, activity_labels.txt, features.txt
 
-* Output file: TidyData.txt
+* Output file: TidyData.txt (180 rows and 88 columns)
 
 * Note: for detailed description of what run_analysis.R does, please check on the [section](https://github.com/courseramchen2k2/GetDataProject#detail-description-of-run_analysisr) near the end of this markup file and read the comments in the script code.
 
@@ -60,4 +60,4 @@ Note: elapsed run time around 1 minute, time may vary depending on CPU speed
 
 4. Descriptive variable names are read from an external file DescriptiveName.txt assigned to the Complete Dataset.
 
-5. Again using dplyr package, pipe Complete Dataset, group by SubjectID and Activity, summarise each of column 3 to 88 with function mean(). then write the result to TidyData.txt in current working directory and view it.
+5. Again using dplyr package, pipe Complete Dataset, group by SubjectID and Activity, summarise each of column 3 to 88 with function mean(). then write the result to TidyData.txt in current working directory and view it.  The output file TidyData.txt is a tidy data set because it matches the tidy data definition that 1. Each variable should be in on column.  2. Each different observation of that variable should be in a different row. 3. There should be one table for each "kind" of variable. 4. If you hae multiple tables, they should include a column in the table that allows them to be linked.

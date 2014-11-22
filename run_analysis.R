@@ -72,5 +72,5 @@ Data3 <- Data2 %>%
          summarise_each(funs(mean),3:88)
 write.table(Data3, file="./TidyData.txt", row.name=FALSE)
 message("Done")
-message("Examine file written")
-View(read.table("./TidyData.txt", check.names=FALSE))
+message("Examine written file")
+View(read.table("./TidyData.txt", header=TRUE, check.names=FALSE))

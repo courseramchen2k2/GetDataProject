@@ -62,9 +62,12 @@ merge(tbl_df(read.table(Activity, col.names=c("ActID", "Activity"))),
         
 ## Part 4, label the data set with descriptive variable names.
 ## descriptive variable names are read from an external file.
+## reset the factor order so it matches the order of Activity Name
+## WALKING < WLKING_UPSTAIRS < WALKING_DOWNSTAIRS < SETTING < STANDARDING < LAYING
 message("Working on Part 3 & 4 of Project...")
 names(Data2) <- c("SubjectID","Activity",as.character(read.table(DFile)[,"V1"]))
-        
+Data2$Activity <- ordered(Data2$Activity, levels=read.table(Activity)[,"V2"])        
+
 ## Part 5, create independent tidy data set with the average of each variable for each activity and each subject.
 message("Working on Part 5 of Project...")
 Data3 <- Data2 %>%
